@@ -6,15 +6,17 @@ import (
 )
 
 func main() {
-	utils.Title("Basic")
+	utils.Chapter("Basic")
 	study.Basic()
 
-	utils.Title("Control")
+	utils.Chapter("Control")
 	study.Control()
 
-	utils.Title("More Types")
+	utils.Chapter("More Types")
 	study.Types()
 
-	utils.Title("Methods")
+	utils.Chapter("Methods")
 	study.Methods()
+
+	utils.Chapter("Concurrency")
 }
