@@ -14,4 +14,7 @@ func main() {
 
 	utils.Title("More Types")
 	study.Types()
+
+	utils.Title("Methods")
+	study.Methods()
 }

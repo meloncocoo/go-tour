@@ -2,6 +2,7 @@ package study
 
 import (
 	"fmt"
+	"math"
 	"strings"
 
 	"golang.org/x/tour/pic"
@@ -290,6 +291,53 @@ func WordCount(s string) map[string]int {
 	return m
 }
 
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func funcValues() {
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println("Sqrt(5*5 + 12*12) =", hypot(5, 12))
+
+	fmt.Println("Sqrt(3*3 + 4*4) =", compute(hypot))
+	fmt.Println("3^4 =", compute(math.Pow))
+}
+
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
+func funcClosures() {
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
+}
+
+func fibonacci() func() int {
+	current, next := 0, 1
+	return func() int {
+		current, next = next, current+next
+		return next - current
+	}
+}
+
+func exerciseFibonacci() {
+	f := fibonacci()
+	for i := 0; i < 20; i++ {
+		fmt.Println(f())
+	}
+}
+
 // Types for study more types
 func Types() {
 	utils.Title("Pointer")
@@ -342,4 +390,13 @@ func Types() {
 
 	utils.Title("Exercise Maps")
 	wc.Test(WordCount)
+
+	utils.Title("Function Values")
+	funcValues()
+
+	utils.Title("Functions Closures")
+	funcClosures()
+
+	utils.Title("Exercise for Fibonacci")
+	exerciseFibonacci()
 }
