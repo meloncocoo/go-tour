@@ -1,6 +1,5 @@
 VSCode安装GO语言依赖工具
 ===
-> 来源：[码农飞龙](https://www.jianshu.com/p/f952042af8ff)
 
 |   |   |   |
 |---|---|---|
@@ -27,36 +26,7 @@ VSCode安装GO语言依赖工具
 安装步骤
 ---
 
-1. 创建目录$GOPATH/src/golang.org/x，并切换到该目录
-```sh
-mkdir -p $GOPATH/src/golang.org/x/
-cd $GOPATH/src/golang.org/x/
-```
-2. 克隆golang.org工具源码
-  > 如果不克隆的话，go get -u -v golang.org/xxx肯定是timeout的，所以只能先把它们下载到本地src/golang.org/x/tools
-```sh
-git clone https://github.com/golang/tools.git
-git clone https://github.com/golang/lint.git
-```
-3. 下载github源码
-  > 按照go get -u -v命令，从GitHub上下载代码后还会fetch，我们很可能会在fetch https://golang.org/xxx的时候挂掉，原因你懂的。所以去掉-u选项，禁止从网络更新现有代码。
-```sh
-# 先从github下载依赖工具的源码，fetch提示timeout不要管
-go get -v github.com/ramya-rao-a/go-outline
-go get -v github.com/acroca/go-symbols
-go get -v github.com/mdempsky/gocode
-go get -v github.com/rogpeppe/godef
-go get -v github.com/zmb3/gogetdoc
-go get -v github.com/fatih/gomodifytags
-go get -u github.com/sqs/goreturns
-go get -v github.com/cweill/gotests/...
-go get -v github.com/josharian/impl
-go get -v github.com/haya14busa/goplay/cmd/goplay
-go get -v github.com/uudashr/gopkgs/cmd/gopkgs
-go get -v github.com/davidrjenni/reftools/cmd/fillstruct
-go get -v github.com/alecthomas/gometalinter
-```
-4. 安装工具
+1. 一般VSCODE会提示自动安装，如果需要可手工安装
 ```sh
 go install github.com/ramya-rao-a/go-outline
 go install github.com/acroca/go-symbols
@@ -78,16 +48,7 @@ go install golang.org/x/tools/cmd/gorename
 go install golang.org/x/tools/cmd/goimports
 go install golang.org/x/tools/cmd/guru
 ```
-  > GOPROXY
-  ```sh
-  export GOPROXY=https://goproxy.io
-  ```
-5. 集成到系统环境中
-  > 由于我是在用户目录下临时安装的，真正的GO环境是/usr/local/go，所以最后一步无比注意，把~/go/bin下面生成的所有执行文件拷贝到系统环境中
-```sh
-sudo cp -af $GOPATH/bin/* /usr/local/go/bin/
-```
-6. 安装问题
+2. 安装问题
   > cannot find package "golang.org/x/net/context/ctxhttp"
 ```sh
 cd $GOPATH/src/golang.org/x
@@ -97,15 +58,4 @@ git clone https://github.com/golang/net
 ```sh
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
-```
-
-语法问题
-===
-
-```go
-s := []int{2, 3, 5, 7, 11, 13}
-
-s = s[:0] // len=0 cap=6 []
-s = s[:4] // len=3 cap=5 [3 5 7]
-s = s[2:] // len=1 cap=3 [7]
 ```
