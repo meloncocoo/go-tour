@@ -1,3 +1,6 @@
+# Go 指南
+[参考地址](https://tour.go-zh.org/list)
+
 # VSCode安装GO语言依赖工具
 
 |名称|描述|链接|
@@ -91,3 +94,6 @@ hello.go # main
 > 开源电子书 [Go Web 编程](https://github.com/astaxie/build-web-application-with-golang)和 [Go 入门指南](https://github.com/Unknwon/the-way-to-go_ZH_CN)能够帮助你更加深入的了解和学习 Go 语言。
 
 > 访问 [go-zh.org](https://go-zh.org/) 了解更多内容。
+
+# GO参考
+* [Go编程语言规范](https://go-zh.org/ref/spec)
