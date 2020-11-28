@@ -59,3 +59,14 @@ git clone https://github.com/golang/net
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 ```
+
+3. 目录结构
+```sh
+hello.go # main
+|- study
+    |- basic.go
+    |- concurrency.go
+    |- control.go
+    |- methods.go
+    |- types.go
+```
