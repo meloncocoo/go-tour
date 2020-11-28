@@ -325,15 +325,16 @@ func funcClosures() {
 
 func fibonacci() func() int {
 	current, next := 0, 1
-	return func() int {
+	return func() (result int) {
+		result = current
 		current, next = next, current+next
-		return next - current
+		return
 	}
 }
 
 func exerciseFibonacci() {
 	f := fibonacci()
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 50; i++ {
 		fmt.Println(f())
 	}
 }

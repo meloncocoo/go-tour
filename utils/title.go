@@ -11,9 +11,8 @@ func Title(s string) {
 	if len(s) > width-2 {
 		width = len(s) + len(s)%2 + 10
 	}
-	left := (width-2)/2 - len(s)/2
-	// right := (width - 2) - left
-	fmt.Printf("%s %s %s\n", strings.Repeat("=", left), s, strings.Repeat("=", left-len(s)%2))
+	padding := (width-2)/2 - len(s)/2
+	fmt.Printf("%s %s %s\n", strings.Repeat("=", padding), s, strings.Repeat("=", padding-len(s)%2))
 }
 
 // Chapter print chapter
