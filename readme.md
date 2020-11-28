@@ -1,9 +1,8 @@
 VSCode安装GO语言依赖工具
 ===
 
-|   |   |   |
-|---|---|---|
 |名称|描述|链接|
+|---|---|---|
 |gocode|代码自动补全|https://github.com/mdempsky/gocode|
 |go-outline|在当前文件中查找|https://github.com/ramya-rao-a/go-outline|
 |go-symbols|在项目路径下查找|https://github.com/acroca/go-symbols|
