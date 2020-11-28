@@ -1,5 +1,4 @@
-VSCode安装GO语言依赖工具
-===
+# VSCode安装GO语言依赖工具
 
 |名称|描述|链接|
 |---|---|---|
@@ -22,8 +21,7 @@ VSCode安装GO语言依赖工具
 |go-langserver|语言服务|https://github.com/sourcegraph/go-langserver|
 |filstruct|结构体成员默认值|https://github.com/davidrjenni/reftools/tree/master/cmd/fillstruct|
 
-安装步骤
----
+# 安装步骤
 
 1. 一般VSCODE会提示自动安装，如果需要可手工安装
 ```sh
@@ -59,7 +57,7 @@ go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 ```
 
-3. 目录结构
+# 目录结构
 ```sh
 hello.go # main
 |- study
@@ -69,3 +67,27 @@ hello.go # main
     |- methods.go
     |- types.go
 ```
+
+# 接下来去哪？
+引用自[Go 指南](https://tour.go-zh.org/concurrency/11)
+
+> 你可以从[安装 Go]([https://go-zh.org/doc/install/]) 开始。
+> 一旦安装了 Go，Go [文档](https://go-zh.org/doc/)是一个极好的 应当继续阅读的内容。 它包含了参考、指南、视频等等更多资料。
+
+> 了解如何组织 Go 代码并在其上工作，参阅[此视频](https://www.youtube.com/watch?v=XCsL89YtqCs)，或者阅读[如何编写 Go 代码](https://go-zh.org/doc/code.html)。
+
+> 如果你需要标准库方面的帮助，请参考[包手册](https://go-zh.org/pkg/)。如果是语言本身的帮助，阅读[语言规范](https://go-zh.org/ref/spec)是件令人愉快的事情。
+
+> 进一步探索 Go 的并发模型，参阅 [Go 并发模型(幻灯片)](https://talks.go-zh.org/2012/concurrency.slide)以及[深入 Go 并发模型(幻灯片)](https://www.youtube.com/watch?v=QDDwwePbDtw)并阅读[通过通信共享内存](https://go-zh.org/doc/codewalk/sharemem/)的代码之旅。
+
+> 想要开始编写 Web 应用，请参阅[一个简单的编程环境](https://vimeo.com/53221558)([幻灯片](https://talks.go-zh.org/2012/simple.slide))并阅读[编写 Web 应用](https://go-zh.org/doc/articles/wiki/)的指南。
+
+> [函数：Go 中的一等公民](https://go-zh.org/doc/codewalk/functions/)展示了有趣的函数类型。
+
+> [Go 博客](https://blog.go-zh.org/)有着众多关于 Go 的文章和信息。
+
+> [mikespook 的博客](https://www.mikespook.com/tag/golang/)中有大量中文的关于 Go 的文章和翻译。
+
+> 开源电子书 [Go Web 编程](https://github.com/astaxie/build-web-application-with-golang)和 [Go 入门指南](https://github.com/Unknwon/the-way-to-go_ZH_CN)能够帮助你更加深入的了解和学习 Go 语言。
+
+> 访问 [go-zh.org](https://go-zh.org/) 了解更多内容。
