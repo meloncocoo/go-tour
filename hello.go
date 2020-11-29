@@ -1,8 +1,8 @@
 package main
 
 import (
-	"melon.org/study"
-	"melon.org/utils"
+	"github.com/meloncocoo/go-tour/study"
+	"github.com/meloncocoo/go-tour/utils"
 )
 
 func main() {

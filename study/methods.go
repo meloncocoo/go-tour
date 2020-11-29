@@ -12,8 +12,8 @@ import (
 
 	"golang.org/x/tour/pic"
 
+	"github.com/meloncocoo/go-tour/utils"
 	"golang.org/x/tour/reader"
-	"melon.org/utils"
 )
 
 // Abser is a interface

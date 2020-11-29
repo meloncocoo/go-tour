@@ -5,9 +5,9 @@ import (
 	"math"
 	"strings"
 
+	"github.com/meloncocoo/go-tour/utils"
 	"golang.org/x/tour/pic"
 	"golang.org/x/tour/wc"
-	"melon.org/utils"
 )
 
 func pointer() {

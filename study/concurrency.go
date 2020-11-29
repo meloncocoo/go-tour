@@ -7,7 +7,7 @@ import (
 
 	"golang.org/x/tour/tree"
 
-	"melon.org/utils"
+	"github.com/meloncocoo/go-tour/utils"
 )
 
 func say(s string) {

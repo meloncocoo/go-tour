@@ -13,7 +13,7 @@ func Title(s string) (f string) {
 	}
 	padding := (width-2)/2 - len(s)/2
 	f = fmt.Sprintf("%s%s%s", strings.Repeat("=", padding), s, strings.Repeat("=", padding-len(s)%2))
-	fmt.Printf(f)
+	fmt.Println(f)
 	return
 }
 
