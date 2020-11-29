@@ -6,13 +6,15 @@ import (
 )
 
 // Title print title
-func Title(s string) {
+func Title(s string) (f string) {
 	width := 80
 	if len(s) > width-2 {
 		width = len(s) + len(s)%2 + 10
 	}
 	padding := (width-2)/2 - len(s)/2
-	fmt.Printf("%s %s %s\n", strings.Repeat("=", padding), s, strings.Repeat("=", padding-len(s)%2))
+	f = fmt.Sprintf("%s%s%s", strings.Repeat("=", padding), s, strings.Repeat("=", padding-len(s)%2))
+	fmt.Printf(f)
+	return
 }
 
 // Chapter print chapter
