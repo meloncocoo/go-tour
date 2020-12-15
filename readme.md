@@ -59,6 +59,8 @@ git clone https://github.com/golang/net
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://goproxy.cn,direct
 ```
+  > could not import github.com/kataras/iris/v12 (no package for import github.com/kataras/iris/v12)
+此类问题需要确认，go.mod文件在当前VSCode项目的根目录下
 
 # 目录结构
 ```sh
